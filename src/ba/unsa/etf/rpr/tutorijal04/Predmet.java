@@ -4,11 +4,12 @@ import java.util.Set;
 
 public class Predmet {
     private String naziv;
-    private int brojECTSKredita, semestar;
+    private int brojECTSKredita;
+    private Semestar semestar;
     private boolean obavezan;
     private Student[] studentiNaPredmetu;
 
-    public Predmet(String naziv, int brojECTSKredita, int semestar, boolean obavezan) {}
+    public Predmet(String naziv, int brojECTSKredita, Semestar semestar, boolean obavezan) {}
 
     private void dodajStudenta(Student student) {}
 
