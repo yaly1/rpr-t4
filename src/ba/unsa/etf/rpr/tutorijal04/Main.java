@@ -5,6 +5,7 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
+        /*
         Semestar sem1 = new Semestar(), sem2 = new Semestar(), sem3 = new Semestar();
 
         Predmet p11 = new Predmet("pred11", 5, sem1, true);
@@ -46,10 +47,11 @@ public class Main {
         s1.dodajPredmet(p27);
         System.out.println(s1.ispoPlanu());
         s1.promjeniSemestar(sem3);
-        /*
+
         .
         .
         .
         */
+
     }
 }

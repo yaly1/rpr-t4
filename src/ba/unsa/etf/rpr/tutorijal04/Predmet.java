@@ -1,21 +1,25 @@
 package ba.unsa.etf.rpr.tutorijal04;
 
-import java.util.Set;
+import java.util.Objects;
 
 public class Predmet {
     private String naziv;
     private int brojECTSKredita;
-    private Semestar semestar;
     private boolean obavezan;
-    private Student[] studentiNaPredmetu;
 
-    public Predmet(String naziv, int brojECTSKredita, Semestar semestar, boolean obavezan) {}
+    public Predmet(String naziv, int brojECTSKredita, boolean obavezan) {
+        this.naziv = naziv;
+        this.brojECTSKredita = brojECTSKredita;
+        this.obavezan = obavezan;
+    }
 
-    private void dodajStudenta(Student student) {}
-
-    private void brisiStudenta(Student student) {}
-
-    public Set<Student> dajSpisakStudenata() {
-        return null;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Predmet predmet = (Predmet) o;
+        return brojECTSKredita == predmet.brojECTSKredita &&
+                obavezan == predmet.obavezan &&
+                Objects.equals(naziv, predmet.naziv);
     }
 }

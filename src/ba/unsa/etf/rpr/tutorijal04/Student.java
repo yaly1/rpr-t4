@@ -1,38 +1,20 @@
 package ba.unsa.etf.rpr.tutorijal04;
 
-import java.util.Set;
-
 public class Student {
     private String ime, prezime;
-    private Semestar semestar;
-    private Predmet[] trenutniPredmeti;
-    private boolean poPlanu = false;
-    private int brojTrenutnihECTSKredita = 0;
+    private int brojIndeksa;
 
-    public Student(String ime, String prezime, Semestar semestar) {}
-
-    public Set<Predmet> dajSpisakPredmeteZaOvajSemestar() {
-        return null;
-    }
-
-    public void dodajPredmet(Predmet predmet) {}
-
-    public void brisiPredmet(Predmet predmet) {}
-
-    public void idiNaSljedeciSemestar() {}
-
-    public void promjeniSemestar(Semestar semestar) {}
-
-    public boolean ispoPlanu() {
-        return false;
-    }
-
-    public int getbrojTrenutnihECTSKredita() {
-        return 0;
+    public Student(String ime, String prezime, int brojIndeksa) {
+        this.ime = ime;
+        this.prezime = prezime;
+        this.brojIndeksa = brojIndeksa;
     }
 
     @Override
-    public String toString() {
-        return "";
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return brojIndeksa == student.brojIndeksa;
     }
 }
