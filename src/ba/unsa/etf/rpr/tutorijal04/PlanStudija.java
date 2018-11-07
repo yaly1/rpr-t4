@@ -5,10 +5,14 @@ import java.util.Objects;
 import java.util.Set;
 
 public class PlanStudija {
-    private Map<Integer, Set<Predmet>> lista;
+    private Map<Integer, Set<Predmet>> planoviStudija;
 
-    public PlanStudija(Map<Integer, Set<Predmet>> lista) {
-        this.lista = lista;
+    public PlanStudija(Map<Integer, Set<Predmet>> planoviStudija) {
+        this.planoviStudija = planoviStudija;
+    }
+
+    public Map<Integer, Set<Predmet>> getPlanoviStudija() {
+        return planoviStudija;
     }
 
     @Override
@@ -16,6 +20,6 @@ public class PlanStudija {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PlanStudija that = (PlanStudija) o;
-        return Objects.equals(lista, that.lista);
+        return Objects.equals(planoviStudija, that.planoviStudija);
     }
 }
